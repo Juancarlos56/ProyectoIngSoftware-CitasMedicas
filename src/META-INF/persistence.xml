@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
-	<persistence-unit name="Barrera-Barrera-Juan-ExamenFinal" transaction-type="JTA">
-	<jta-data-source>jdbc/_proveedores</jta-data-source>
-	<class>ec.edu.ups.entidades.Cliente</class>
-	<class>ec.edu.ups.entidades.Restuarante</class>
-	<class>ec.edu.ups.entidades.Reserva</class>
-	
-	
-	
-	<properties>
-			 <property name="javax.persistence.schema-generation.database.action" value="create"/>
-	</properties>
+	<persistence-unit name="ProyectoIngSoftware-CitasMedicas" transaction-type="RESOURCE_LOCAL">
+		<class>ec.edu.ups.entidades.Persona</class>
+		<class>ec.edu.ups.entidades.Especialidad</class>
+		<class>ec.edu.ups.entidades.EstudioMedico</class>
+		<class>ec.edu.ups.entidades.HorarioMedico</class>
+		<class>ec.edu.ups.entidades.Medico</class>
+		<class>ec.edu.ups.entidades.AgendaCitaMedica</class>
+		<class>ec.edu.ups.entidades.Secretaria</class>
+		<class>ec.edu.ups.entidades.FacturaDetalle</class>
+		<class>ec.edu.ups.entidades.FacturaGeneral</class>
+		<class>ec.edu.ups.entidades.FacturaCabecera</class>
+		<class>ec.edu.ups.entidades.Activo</class>
+		<class>ec.edu.ups.entidades.LibroDiario</class>
+		<class>ec.edu.ups.entidades.FacturaSalario</class>
+		<class>ec.edu.ups.entidades.Pasivo</class>
+		<class>ec.edu.ups.entidades.CajaDiaria</class>
+		<class>ec.edu.ups.entidades.Paciente</class>
+		<class>ec.edu.ups.entidades.FacturaCompra</class>
+		<class>ec.edu.ups.entidades.Consulta</class>
+		<class>ec.edu.ups.entidades.HistorialMedico</class>
+		<class>ec.edu.ups.entidades.Certificado</class>
+		<class>ec.edu.ups.entidades.OrdenMedica</class>
+		<properties>
+			<property name="eclipselink.ddl-generation" value="create-tables" />			
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/citasMedicas?serverTimezone=UTC" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="5665" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+		</properties>
 	
 	</persistence-unit>
 </persistence>

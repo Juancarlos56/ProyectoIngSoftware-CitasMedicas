@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Barrera-Barrera-Juan-ExamenFinal">
+    <wb-module deploy-name="ProyectoIngSoftware-CitasMedicas">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Barrera-Barrera-Juan-ExamenFinal"/>
-        <property name="java-output-path" value="/Barrera-Barrera-Juan-ExamenFinal/build/classes"/>
+        <property name="context-root" value="ProyectoIngSoftware-CitasMedicas"/>
+        <property name="java-output-path" value="/ProyectoIngSoftware-CitasMedicas/build/classes"/>
     </wb-module>
 </project-modules>
