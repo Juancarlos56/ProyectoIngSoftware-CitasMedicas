@@ -81,6 +81,7 @@ public class AgendaCitaMedica implements Serializable {
 
 	//Contructor sin ID por autogeneracion del codigo 
 
+
 	public AgendaCitaMedica(Calendar fechaActualDeAgendaCitaMedica, Calendar fechaReservaDeAgendaCitaMedica,
 			String tipoCitaDeAgendaCitaMedica, String estadoDeAgendaCitaMedica, float precioDeAgendaCitaMedica) {
 		super();
@@ -223,6 +224,16 @@ public class AgendaCitaMedica implements Serializable {
 	}
 
 
+
+
+	public FacturaDetalle getCitasDeFacturaDetalle() {
+		return citasDeFacturaDetalle;
+	}
+
+
+	public void setCitasDeFacturaDetalle(FacturaDetalle citasDeFacturaDetalle) {
+		this.citasDeFacturaDetalle = citasDeFacturaDetalle;
+	}
 
 
 	@Override

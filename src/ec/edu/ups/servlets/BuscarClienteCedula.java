@@ -2,6 +2,7 @@ package ec.edu.ups.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,21 +77,27 @@ public class BuscarClienteCedula extends HttpServlet {
 				
 				
 				for (AgendaCitaMedica cita : citas) {
+					
+					SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+					String fechaNac = sdf.format(paciente.getFechaDeNacimiento().getTime());
+					String fechaRese = sdf.format(cita.getFechaActualDeAgendaCitaMedica().getTime());
+					
 					tablaDatos = tablaDatos + "<tr>"+
 							"<td>"+paciente.getNombre()+"</td>"+
 							"<td>"+paciente.getApellido()+"</td>"+
 							"<td>"+paciente.getCedula()+"</td>"+
 							"<td>"+paciente.getLugarNacimiento()+"</td>"+
-							"<td>"+paciente.getFechaDeNacimiento().getTime()+"</td>"+
+							"<td>"+fechaNac+"</td>"+
 							"<td>"+paciente.getEmail()+"</td>"+
 							"<td>"+cita.getEstadoDeAgendaCitaMedica()+"</td>"+
 							"<td>"+cita.getPrecioDeAgendaCitaMedica()+"</td>"+
 							"<td>"+cita.getTipoCitaDeAgendaCitaMedica()+"</td>"+
-							"<td>"+cita.getFechaActualDeAgendaCitaMedica()+"</td>"+
+							"<td>"+fechaRese+"</td>"+
 							
 							"<td><input type='button' id='pedidoSeleccionado' name='pedidoSeleccionado' value='Seleccionar' onclick=\"mostrarCliente("+paciente.getIdPaciente()
 								+", \'"+paciente.getNombre()+"\' , \'"+paciente.getApellido()+"\' , \'"+paciente.getCedula()+"\' , \'"+paciente.getLugarNacimiento()
-								+"\' , \'"+paciente.getEmail()+"\',\'"+ paciente.getNacionalidad() +"\')\"></td>"+
+								+"\' , \'"+paciente.getEmail()+"\',\'"+ paciente.getNacionalidad() +"\',"+cita.getIdAgendaCitaMedica()+", "+cita.getPrecioDeAgendaCitaMedica()
+								+",\'"+cita.getTipoCitaDeAgendaCitaMedica()+"\')\"></td>"+
 							"</tr>";
 				}
 			}else {

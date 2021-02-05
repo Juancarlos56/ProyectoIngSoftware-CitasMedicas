@@ -37,8 +37,8 @@
             <div id="informacion"><b>Datos de la persona</b></div>
 			
 			<!-- Formulario para cliente -->
-		
-            <input class="sepBot" type="text" id="codigoCliente" name="nombreProducto" value="" style="display: none;" />
+			
+			<input class="sepBot" type="text" id="codigoCliente" name="codigoCliente" value="" style="display: none;" />
             <br>
 	        <label for="nombreClienteLabel" id="nomPro" style="margin-right: 50px;" >Nombre:</label>
             <input class="sepBot" type="text" id="nombreCliente" name="nombreCliente" value="" readonly />
@@ -65,15 +65,31 @@
 			<label for="nacionlidadClienteLabel" id="totalped" style="margin-right: 50px;" >Nacionalidad:   </label>
             <input class="sepBot" type="text" id="nacionlidadCliente" name="nacionlidadCliente" value="" readonly/>
             <br>
-			
+            
+            
+            <input class="sepBot" type="text" id="codigoCita" name="codigoCita" value="" style="display: none;" />
+            <br>
+	        
+			<label for="precioCita" id="precioPedidoLabel" style="margin-right: 50px;" >Precio:   </label>
+            <input class="sepBot" type="text" id="precioCita" name="precioCita" value="" readonly/>
+            <br>
+            
+            <label for="tipoCita" id="tipoCitaLabel" style="margin-right: 50px;" >Tipo Cita Medica:   </label>
+            <input class="sepBot" type="text" id="tipoCita" name="tipoCita" value="" readonly/>
+            <br>
+            
+             <input type="button" id="facturaDetalle" name="facturaDetalle" value="Agregar para facturar" onclick="agregarFacturaDetalle()">
+            
+			<div class="separador"> </div>
+           	<div id="informacionPago"><b>Facturas a Pagar: </b></div>
+		
+            
         </article>
         
         
         
        
 	
- 	<form action="" class="nuevaCompra" id="formularioRealizarPedido" method="POST" >
-			
-	</form>
+ 	
 </body>
 </html>
